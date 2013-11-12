@@ -1,0 +1,11 @@
+#!/bin/bash
+# vim: fileencoding=utf-8 tw=100 noexpandtab ts=8 sw=8 ft=sh :
+
+JETPACK_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
+. "$JETPACK_ROOT/init.sh"
+
+BUILD_DIR="$1"
+CACHE_DIR="$2"
+
+require python 3.3.2
+require npm 1.3.11
