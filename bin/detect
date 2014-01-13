@@ -1,0 +1,8 @@
+# vim: fileencoding=utf-8 tw=100 noexpandtab ts=8 sw=8 ft=sh :
+
+if [ -f "$1/jetpack.sh" ]; then
+	echo "jetpack"
+	exit 0
+else
+	exit 1
+fi
