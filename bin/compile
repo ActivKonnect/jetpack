@@ -9,6 +9,7 @@ CACHE_DIR="$2"
 
 shout "Compiling!"
 
+echo "JETPACK_ROOT = $JETPACK_ROOT" | indent
 echo "BUILD_DIR = $BUILD_DIR" | indent
 echo "CACHE_DIR = $CACHE_DIR" | indent
 
