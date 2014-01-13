@@ -2,3 +2,4 @@
 
 source "$JETPACK_ROOT/lib/utils/output.sh"
 source "$JETPACK_ROOT/lib/utils/require.sh"
+source "$JETPACK_ROOT/lib/utils/fs.sh"

@@ -6,11 +6,23 @@ JETPACK_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
 
 BUILD_DIR="$1"
 CACHE_DIR="$2"
+APP_DIR="/app"
 
-shout "Compiling!"
+shout "Environment info"
 
 echo "JETPACK_ROOT = $JETPACK_ROOT" | indent
 echo "BUILD_DIR = $BUILD_DIR" | indent
 echo "CACHE_DIR = $CACHE_DIR" | indent
 
+
+shout "Preparing build"
+
+echo "Fetching the app"
+cp_contents "$BUILD_DIR" "$APP_DIR"
+
+
 source "$BUILD_DIR/jetpack.sh"
+
+
+echo "Saving the build"
+cp_contents "$APP_DIR" "$BUILD_DIR"

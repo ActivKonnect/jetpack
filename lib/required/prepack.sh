@@ -4,7 +4,7 @@ function install_prepack {
 	shout "Installing a pre-pack"
 
 	echo -n "Decompressing..." | indent
-	curl -s "$1" | tar -x -z -C $BUILD_DIR && echo " ok"
+	curl -s "$1" | tar -x -z -C $APP_DIR && echo " ok"
 
-	export PATH="$BUILD_DIR/.heroku/bin:$PATH"
+	export PATH="$APP_DIR/.heroku/bin:$PATH"
 }
