@@ -7,8 +7,7 @@ function install_pip {
 	curl -s https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python | indent
 
 	echo "Installing dependencies" | indent
-	PIP_SRC="$CACHE_DIR/pip/src"
-	mkdir -p "$PIP_SRC"
+	PIP_SRC=$(mktemp -d)
 
-	(cd; exec pip install -r "$BUILD_DIR/requirements.txt" --exists-action=w --src="$PIP_SRC") | indent
+	pip install -r "$BUILD_DIR/requirements.txt" --exists-action=w --src="$PIP_SRC" | indent
 }
