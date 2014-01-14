@@ -17,12 +17,11 @@ echo "CACHE_DIR = $CACHE_DIR" | indent
 
 shout "Preparing build"
 
-echo "Fetching the app"
-cp_contents "$BUILD_DIR" "$APP_DIR"
-
 
 source "$BUILD_DIR/jetpack.sh"
 
 
-echo "Saving the build"
-cp_contents "$APP_DIR" "$BUILD_DIR"
+shout "Re-sync jetpack folder"
+
+mkdir -p "$BUILD_DIR/.jetpack"
+cp_contents "$APP_DIR/.jetpack" "$BUILD_DIR/.jetpack"

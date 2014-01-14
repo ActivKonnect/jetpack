@@ -12,4 +12,6 @@ function require {
 
 	source "$package_file"
 	"install_$package" $arguments
+
+	for f in "$BUILD_DIR/.profile.d/"*; do source $f; done
 }
