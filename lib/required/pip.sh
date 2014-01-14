@@ -10,5 +10,5 @@ function install_pip {
 	PIP_SRC="$APP_DIR/.jetpack/python/src"
 	mkdir -p "$PIP_SRC"
 
-	pip install -r "$BUILD_DIR/requirements.txt" -I --exists-action=w --src="$PIP_SRC" | indent
+	pip install -r "$BUILD_DIR/requirements.txt" --exists-action=w --src="$PIP_SRC" | indent
 }
