@@ -2,5 +2,10 @@
 
 function install_pip {
 	shout "Installing Pip dependencies"
-	pip install -r "$BUILD_DIR/requirements.txt" | indent
+
+	PIP_SRC="$CACHE_DIR/pip/src"
+
+	mkdir -p "$PIP_SRC"
+
+	pip install -r "$BUILD_DIR/requirements.txt" --exists-action=w --src="$PIP_SRC" | indent
 }
