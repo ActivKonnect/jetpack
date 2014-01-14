@@ -9,7 +9,8 @@ CACHE_DIR="$2"
 APP_DIR="/app"
 CWD=$(mktemp -d)
 
-cd "$CWD"
+# Raaaaah
+unset GIT_DIR PYTHONHOME PYTHONPATH LD_LIBRARY_PATH LIBRARY_PATH
 
 shout "Environment info"
 
