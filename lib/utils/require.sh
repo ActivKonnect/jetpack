@@ -13,5 +13,7 @@ function require {
 	source "$package_file"
 	"install_$package" $arguments
 
-	for f in "$BUILD_DIR/.profile.d/"*; do source $f; done
+	if [ -d "$BUILD_DIR/.profile.d" ]; then
+		for f in "$BUILD_DIR/.profile.d/"*; do source $f; done
+	fi
 }
